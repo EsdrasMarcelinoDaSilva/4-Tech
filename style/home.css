@@ -14,9 +14,14 @@ body {
   background-attachment: fixed;
 }
 
+.logo {
+  background-color: rgba(6, 8, 29, 0.4);
+  border-radius: 1.25rem;
+}
+
 .logo img {
   max-width: 6.25rem;
-  border-radius: 50%;
+  
 }
 
 header {
