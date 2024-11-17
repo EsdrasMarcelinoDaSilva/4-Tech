@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Quiz para descobrir sua vocação na área de tecnologia">
+      <title>Quiz: Descubra sua Vocação Tecnológica</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .question h3 {
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main>
+        <header>
+            <h1>Quiz: Descubra sua Vocação Tecnológica</h1>
+        </header>
+        
+        <form id="quizForm" aria-label="Formulário do Quiz Vocacional">
+            <section class="question" aria-labelledby="question1">
+                <h2 id="question1">1. O que mais te atrai em tecnologia?</h2>
+                <fieldset>
+                    <legend>Escolha uma opção:</legend>
+                    <div class="option">
+                        <input type="radio" id="q1-dev" name="q1" value="dev" required>
+                        <label for="q1-dev">Criar aplicações e software</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1-data" name="q1" value="data">
+                        <label for="q1-data">Analisar dados para descobrir padrões</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1-design" name="q1" value="design">
+                        <label for="q1-design">Projetar interfaces e experiências de usuário</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section class="question" aria-labelledby="question2">
+                <h2 id="question2">2. Qual habilidade você gostaria de desenvolver?</h2>
+                <fieldset>
+                    <legend>Escolha uma opção:</legend>
+                    <div class="option">
+                        <input type="radio" id="q2-data" name="q2" value="data" required>
+                        <label for="q2-data">Trabalhar com estatísticas e visualizações</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2-dev" name="q2" value="dev">
+                        <label for="q2-dev">Programar linguagens complexas</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2-design" name="q2" value="design">
+                        <label for="q2-design">Criar layouts e identidades visuais</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section class="question" aria-labelledby="question3">
+                <h2 id="question3">3. Qual dessas ferramentas mais te chama a atenção?</h2>
+                <fieldset>
+                    <legend>Escolha uma opção:</legend>
+                    <div class="option">
+                        <input type="radio" id="q3-design" name="q3" value="design" required>
+                        <label for="q3-design">Figma ou Photoshop</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3-data" name="q3" value="data">
+                        <label for="q3-data">Power BI ou SQL</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3-dev" name="q3" value="dev">
+                        <label for="q3-dev">Visual Studio Code ou Git</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <button 
+                type="button" 
+                onclick="calculateResult()" 
+                aria-controls="result"
+                class="submit-button">
+                Descobrir minha vocação
+            </button>
+        </form>
+
+        <section id="result" aria-live="polite" role="status">
+            <!-- Resultados serão inseridos aqui via JavaScript -->
+        </section>
+    </main>
+
+    <aside class="robot-illustration" role="complementary" aria-label="Ilustração de robô">
+        <figure>
+            <img 
+                src="../assets/img-robo.png" 
+                alt="Ilustração de um robô amigável representando o assistente do quiz"
+                width="300" 
+                height="auto"
+                loading="lazy">
+            <figcaption class="visually-hidden">Robô assistente do quiz vocacional</figcaption>
+        </figure>
+    </aside>
+</div>
+  <script>
+    function calculateResult() {
+      const form = document.getElementById('quizForm');
+      const formData = new FormData(form);
+      const scores = { dev: 0, data: 0, design: 0 };
+
+      formData.forEach((value) => {
+        scores[value]++;
+      });
+
+      const result = Object.keys(scores).reduce((a, b) => (scores[a] > scores[b] ? a : b));
+
+      const resultElement = document.getElementById('result');
+      if (result === 'dev') {
+        resultElement.textContent = "Sua vocação é ser Desenvolvedor(a)! Você gosta de criar soluções e ama programar.";
+      } else if (result === 'data') {
+        resultElement.textContent = "Sua vocação é ser Cientista de Dados! Você gosta de análises e soluções baseadas em dados.";
+      } else if (result === 'design') {
+        resultElement.textContent = "Sua vocação é ser Designer! Você tem um olhar criativo e se preocupa com a experiência do usuário.";
+      } else {
+        resultElement.textContent = "Não conseguimos determinar sua vocação. Tente novamente!";
+      }
+    }
+  </script>
+</body>
+</html>
