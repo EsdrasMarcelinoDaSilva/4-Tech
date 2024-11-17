@@ -1,48 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <meta
+      name="description"
+      content="4-tech: Sua plataforma de tecnologia e inovação"
+    />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <!-- <link rel="stylesheet" href="./style/home.css" /> -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style/home.css" />
-    <script src="scripts/home-page.js" defer></script>
-    <title>4-tech</title>
+    <!-- <script src="scripts/home-page.js" defer></script> -->
+
+    <title>4-tech | Plataforma de Tecnologia e Inovação</title>
   </head>
   <body>
-    <div class="background-image"></div>
-    <header>
-      <div class="logo">
-        <img src="assets/images/img-logo-2-removebg.png" alt="Logo" />
-      </div>
-      <nav>
+    <div class="background-image" role="presentation" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="main-nav" aria-label="Navegação principal">
         <ul class="nav-links">
-          <li>Home</li>
-          <li>About</li>
-          <li>Others</li>
-          <li>Contact</li>
-          <li><a href="login.html" class="login-button">Login</a></li>
+          <li><a href="#" aria-current="page">Home</a></li>
+          <li><a href="#sobre">Quem somos</a></li>
+          <li><a href="./pages/quiz-check.html">Quiz</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li>
+            <a href="login.html" class="login-button" aria-label="Fazer login">
+              Login
+            </a>
+          </li>
         </ul>
-        <div class="hamburger" id="hamburger">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menu de navegação"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
       </nav>
     </header>
-       <main>
-      <section class="content">
-        <p>
-          <img src="./assets/animacao/codesandbox-2.gif" alt="animacao-gif" class="text-animacao">
-        </p>
+
+    <main id="conteudo-principal">
+      <section class="content" aria-labelledby="section-title">
+        <h1 id="section-title" class="visually-hidden">Bem-vindo à 4-tech</h1>
+        <figure>
+          <img
+            src="assets/animation/codesandbox-2.gif"
+            alt="Animação ilustrativa de programação e tecnologia"
+            class="text-animacao"
+            loading="lazy"
+          />
+        </figure>
       </section>
-      <section class="main-image">
-        <img src="assets/images/img-logo-2-removebg.png" alt="Imagem à direita" />
-      </section>
+
+      <figure class="main-image">
+        <img
+          src="assets/img-logo-2-removebg.png"
+          alt="Logo da 4-tech"
+          loading="lazy"
+        />
+      </figure>
     </main>
-    <footer><p>© 4-Tech 2024. Todos os direitos reservados.</p></footer>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <time datetime="2024">2024</time> 4-Tech. Todos os direitos
+        reservados.
+      </p>
+    </footer>
   </body>
 </html>

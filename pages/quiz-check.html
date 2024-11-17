@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Quiz para descobrir sua vocação na área de tecnologia"
+    />
+    <title>Quiz: Descubra sua Vocação Tecnológica</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <main>
+        <header>
+          <h1>Quiz: Descubra sua Vocação Tecnológica</h1>
+        </header>
+
+        <form id="quizForm" aria-label="Formulário do Quiz Vocacional">
+          <section class="question" aria-labelledby="question1">
+            <h2 id="question1">1. O que mais te atrai em tecnologia?</h2>
+            <fieldset>
+              <legend>Escolha uma opção:</legend>
+              <div class="option">
+                <input
+                  type="radio"
+                  id="q1-dev"
+                  name="q1"
+                  value="dev"
+                  required
+                />
+                <label for="q1-dev">Criar aplicações e software</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="q1-data" name="q1" value="data" />
+                <label for="q1-data"
+                  >Analisar dados para descobrir padrões</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" id="q1-design" name="q1" value="design" />
+                <label for="q1-design"
+                  >Projetar interfaces e experiências de usuário</label
+                >
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="question" aria-labelledby="question2">
+            <h2 id="question2">
+              2. Qual habilidade você gostaria de desenvolver?
+            </h2>
+            <fieldset>
+              <legend>Escolha uma opção:</legend>
+              <div class="option">
+                <input
+                  type="radio"
+                  id="q2-data"
+                  name="q2"
+                  value="data"
+                  required
+                />
+                <label for="q2-data"
+                  >Trabalhar com estatísticas e visualizações</label
+                >
+              </div>
+              <div class="option">
+                <input type="radio" id="q2-dev" name="q2" value="dev" />
+                <label for="q2-dev">Programar linguagens complexas</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="q2-design" name="q2" value="design" />
+                <label for="q2-design"
+                  >Criar layouts e identidades visuais</label
+                >
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="question" aria-labelledby="question3">
+            <h2 id="question3">
+              3. Qual dessas ferramentas mais te chama a atenção?
+            </h2>
+            <fieldset>
+              <legend>Escolha uma opção:</legend>
+              <div class="option">
+                <input
+                  type="radio"
+                  id="q3-design"
+                  name="q3"
+                  value="design"
+                  required
+                />
+                <label for="q3-design">Figma ou Photoshop</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="q3-data" name="q3" value="data" />
+                <label for="q3-data">Power BI ou SQL</label>
+              </div>
+              <div class="option">
+                <input type="radio" id="q3-dev" name="q3" value="dev" />
+                <label for="q3-dev">Visual Studio Code ou Git</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <button
+            type="button"
+            onclick="calculateResult()"
+            aria-controls="result"
+            class="submit-button"
+          >
+            Descobrir minha vocação
+          </button>
+        </form>
+
+        <section id="result" aria-live="polite" role="status">
+          <!-- Resultados serão inseridos aqui via JavaScript -->
+        </section>
+      </main>
+
+      <aside
+        class="robot-illustration"
+        role="complementary"
+        aria-label="Ilustração de robô"
+      >
+        <figure>
+          <img
+            src="../assets/img-robo.png"
+            alt="Ilustração de um robô amigável representando o assistente do quiz"
+            width="300"
+            height="auto"
+            loading="lazy"
+          />
+          <figcaption class="visually-hidden">
+            Robô assistente do quiz vocacional
+          </figcaption>
+        </figure>
+      </aside>
+    </div>
+  </body>
+</html>
