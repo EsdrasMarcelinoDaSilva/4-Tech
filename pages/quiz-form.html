@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz: Descubra sua Vocação Tecnológica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .question h3 {
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz: Descubra sua Vocação Tecnológica</h1>
+  <form id="quizForm">
+    <div class="question">
+      <h3>1. O que mais te atrai em tecnologia?</h3>
+      <input type="radio" name="q1" value="dev" required> Criar aplicações e software<br>
+      <input type="radio" name="q1" value="data"> Analisar dados para descobrir padrões<br>
+      <input type="radio" name="q1" value="design"> Projetar interfaces e experiências de usuário<br>
+    </div>
+    <div class="question">
+      <h3>2. Qual habilidade você gostaria de desenvolver?</h3>
+      <input type="radio" name="q2" value="data" required> Trabalhar com estatísticas e visualizações<br>
+      <input type="radio" name="q2" value="dev"> Programar linguagens complexas<br>
+      <input type="radio" name="q2" value="design"> Criar layouts e identidades visuais<br>
+    </div>
+    <div class="question">
+      <h3>3. Qual dessas ferramentas mais te chama a atenção?</h3>
+      <input type="radio" name="q3" value="design" required> Figma ou Photoshop<br>
+      <input type="radio" name="q3" value="data"> Power BI ou SQL<br>
+      <input type="radio" name="q3" value="dev"> Visual Studio Code ou Git<br>
+    </div>
+    <button type="button" onclick="calculateResult()">Descobrir minha vocação</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    function calculateResult() {
+      const form = document.getElementById('quizForm');
+      const formData = new FormData(form);
+      const scores = { dev: 0, data: 0, design: 0 };
+
+      formData.forEach((value) => {
+        scores[value]++;
+      });
+
+      const result = Object.keys(scores).reduce((a, b) => (scores[a] > scores[b] ? a : b));
+
+      const resultElement = document.getElementById('result');
+      if (result === 'dev') {
+        resultElement.textContent = "Sua vocação é ser Desenvolvedor(a)! Você gosta de criar soluções e ama programar.";
+      } else if (result === 'data') {
+        resultElement.textContent = "Sua vocação é ser Cientista de Dados! Você gosta de análises e soluções baseadas em dados.";
+      } else if (result === 'design') {
+        resultElement.textContent = "Sua vocação é ser Designer! Você tem um olhar criativo e se preocupa com a experiência do usuário.";
+      } else {
+        resultElement.textContent = "Não conseguimos determinar sua vocação. Tente novamente!";
+      }
+    }
+  </script>
+</body>
+</html>
