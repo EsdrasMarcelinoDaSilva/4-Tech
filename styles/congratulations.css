@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat";
+    position: relative;
+    background-color: #080338 ;
+    /* background-image: url("../assets/images/background-2.png"); */
+ 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.confetti{
+    position: absolute;
+    width: 100%;   
+    object-fit: cover;
+    z-index: -1;
+}

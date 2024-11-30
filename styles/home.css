@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  position: relative;
+  background-image: url("../assets/images/background-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.logo {
+  background-color: rgba(6, 8, 29, 0.4);
+  border-radius: 1.25rem;
+}
+
+.logo img {
+  max-width: 6.25rem;
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: transparent;
+  color: #fff;
+}
+
+h1{
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, padding 0.3s, border-radius 0.3s;
+  box-sizing: border-box;
+}
+
+nav ul li a:hover { 
+  background-color: #05859C;  
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 1.5625rem;
+  height: 3px;
+  background-color: white;
+  margin: 2px 0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+}
+
+.text-animation {
+  border-radius: 1.25rem;
+  width: 36rem;
+  margin-left: 1.3rem;
+}
+
+.logo-center{
+  margin-left: -4rem;
+}
+
+.main-image {
+  
+}
+
+.field-animation {
+  height: 0;
+  margin-top: 14rem;
+}
+
+footer {
+  text-align: center;
+  font-weight: bold;
+  padding: 1em;
+  background-color: #064666;
+  margin-top: 2.2rem;
+}
+
+footer p {  
+  color: #fff;
+}
+
+.icon{
+  width: 1.5rem;
+  margin-right: .5em;
+  margin-left: .5em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 48rem) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 6.25rem;
+    left: 0;
+    background-color: transparent;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 6px 0;
+    color: #fff;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .main-image {
+    margin-left: 0;
+  }
+  main img {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 768px) { 
+  .menu-hamburguer { 
+    position: relative; 
+    margin-bottom: 20px; 
+    
+  } .main-content { 
+    margin-top: 60px;  
+  } 
+}
