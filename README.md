@@ -35,12 +35,12 @@ Não é necessária nenhuma instalação adicional ou dependência, pois o proje
 
 ## 👥 Time de Desenvolvimento
 
-- **Esdras Marcelino da Silva** 
-- **Pamela** 
-- **Tamara Farias**
-- **Fabio Nogueira**
-- **Brenno**
-- **Joao Batista Viana**
+- <a href="https://github.com/EsdrasMarcelinoDaSilva">**Esdras Marcelino da Silva**</a> 
+- <a href="https://github.com/Pamela-Ayres">**Pamela Ayres**</a>
+- <a href="https://github.com/tamarifarias">**Tamara Farias**</a>
+- <a href="https://github.com/faanogueira">**Fabio Nogueira**</a>
+- <a href="https://github.com/BrennoPeronicoCabral">**Brenno Cabral**</a>
+- <a href="https://github.com/jbviana123">**Joao Batista Viana**</a>
 
 ## 📄 Licença
 

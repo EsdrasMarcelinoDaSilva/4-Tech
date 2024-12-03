@@ -15,28 +15,30 @@
       type="image/x-icon"
     />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-    <!-- <link rel="stylesheet" href="./style/home.css" /> -->
+    <link rel="stylesheet" href="./styles/home.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="scripts/home-page.js" defer></script> -->
+    <script src="scripts/home-page.js" defer></script>
 
     <title>4-tech | Plataforma de Tecnologia e Inovação</title>
   </head>
+
   <body>
     <div class="background-image" role="presentation" aria-hidden="true"></div>
 
-    <header class="site-header">
+    <header>
+      <div></div>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul class="nav-links">
           <li><a href="./index.html" aria-current="page">Home</a></li>
-          <li><a href="#sobre">Quem somos</a></li>
-          <li><a href="./pages/quiz-check.html">Quiz</a></li>
+          <li><a href="./pages/Quemsomos.html">Quem somos</a></li>
+          <li><a href="./pages/introducaoquiz.html">Quiz</a></li>
           <li><a href="./pages/cursos.html">Cursos</a></li>
           <li>
-            <a href="login.html" class="login-button" aria-label="Fazer login">
+            <a href="./pages/Login.html" class="login-button" aria-label="Fazer login">
               Login
             </a>
           </li>
@@ -58,30 +60,32 @@
 
     <main id="conteudo-principal">
       <section class="content" aria-labelledby="section-title">
-        <h1 id="section-title" class="visually-hidden">Bem-vindo à 4-tech</h1>
-        <figure>
+       
+        <figure class="main-image">
           <img
-            src="assets/animation/codesandbox-2.gif"
-            alt="Animação ilustrativa de programação e tecnologia"
-            class="text-animacao"
+            src="assets/images/img-logo-2-removebg.png"
+            alt="Logo da 4-tech"
+            class="logo-center"
             loading="lazy"
           />
         </figure>
-      </section>
 
-      <figure class="main-image">
-        <img
-          src="assets/images/img-logo-2-removebg.png"
-          alt="Logo da 4-tech"
-          loading="lazy"
-        />
-      </figure>
+        <figure class="field-animation">
+          <img
+            src="assets/animation/codesandbox-2.gif"
+            alt="Animação ilustrativa de programação e tecnologia"
+            class="text-animation"
+            loading="lazy"
+          />
+        </figure>
+
+      </section>
     </main>
 
     <footer class="site-footer">
       <p>
         &copy; <time datetime="2024">2024</time> 4-Tech. Todos os direitos
-        reservados.
+        reservados. <span><img class="icon" src="./assets/images/icon-phone.png" alt="imagem de telefone"></span> <span>(33) 9999-9999</span>
       </p>
     </footer>
   </body>
