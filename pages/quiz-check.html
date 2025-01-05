@@ -7,145 +7,43 @@
       name="description"
       content="Quiz para descobrir sua vocação na área de tecnologia"
     />
-    <title>Quiz: Descubra sua Vocação Tecnológica</title>
+    <title>Quiz: Vocação Tecnológica</title>
+    <link rel="stylesheet" href="../styles/quiz-check.css" />
   </head>
 
   <body>
     <div class="container">
-      <main>
-        <header>
-          <h1>Quiz: Descubra sua Vocação Tecnológica</h1>
-          <nav class="main-nav" aria-label="Navegação principal">
-            <ul class="nav-links">
-              <li><a href="../index.html" aria-current="page">Home</a></li>
-            </ul>
-
-            <button
-              class="hamburger"
-              id="hamburger"
-              aria-label="Abrir menu de navegação"
-              aria-expanded="false"
-              aria-controls="nav-links"
-            >
-              <span class="bar" aria-hidden="true"></span>
-              <span class="bar" aria-hidden="true"></span>
-              <span class="bar" aria-hidden="true"></span>
-            </button>
-          </nav>
-        </header>
-
-        <form id="quizForm" aria-label="Formulário do Quiz Vocacional">
-          <section class="question" aria-labelledby="question1">
-            <h2 id="question1">1. O que mais te atrai em tecnologia?</h2>
-            <fieldset>
-              <legend>Escolha uma opção:</legend>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="q1-dev"
-                  name="q1"
-                  value="dev"
-                  required
-                />
-                <label for="q1-dev">Criar aplicações e software</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q1-data" name="q1" value="data" />
-                <label for="q1-data"
-                  >Analisar dados para descobrir padrões</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" id="q1-design" name="q1" value="design" />
-                <label for="q1-design"
-                  >Projetar interfaces e experiências de usuário</label
-                >
-              </div>
-            </fieldset>
-          </section>
-
-          <section class="question" aria-labelledby="question2">
-            <h2 id="question2">
-              2. Qual habilidade você gostaria de desenvolver?
-            </h2>
-            <fieldset>
-              <legend>Escolha uma opção:</legend>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="q2-data"
-                  name="q2"
-                  value="data"
-                  required
-                />
-                <label for="q2-data"
-                  >Trabalhar com estatísticas e visualizações</label
-                >
-              </div>
-              <div class="option">
-                <input type="radio" id="q2-dev" name="q2" value="dev" />
-                <label for="q2-dev">Programar linguagens complexas</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q2-design" name="q2" value="design" />
-                <label for="q2-design"
-                  >Criar layouts e identidades visuais</label
-                >
-              </div>
-            </fieldset>
-          </section>
-
-          <section class="question" aria-labelledby="question3">
-            <h2 id="question3">
-              3. Qual dessas ferramentas mais te chama a atenção?
-            </h2>
-            <fieldset>
-              <legend>Escolha uma opção:</legend>
-              <div class="option">
-                <input
-                  type="radio"
-                  id="q3-design"
-                  name="q3"
-                  value="design"
-                  required
-                />
-                <label for="q3-design">Figma ou Photoshop</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q3-data" name="q3" value="data" />
-                <label for="q3-data">Power BI ou SQL</label>
-              </div>
-              <div class="option">
-                <input type="radio" id="q3-dev" name="q3" value="dev" />
-                <label for="q3-dev">Visual Studio Code ou Git</label>
-              </div>
-            </fieldset>
-          </section>
-
-          <a href="../pages/parabens.html">Descobrir minha vocação</a>
-        </form>
-
-        <section id="result" aria-live="polite" role="status">
-          <!-- Resultados serão inseridos aqui via JavaScript -->
-        </section>
-      </main>
-
-      <aside
-        class="robot-illustration"
-        role="complementary"
-        aria-label="Ilustração de robô"
-      >
-        <figure>
-          <img
-            src="../assets/images/img-robo.png"
-            alt="Ilustração de um robô amigável representando o assistente do quiz"
-            loading="lazy"
-          />
-          <figcaption class="visually-hidden">
-            Robô assistente do quiz vocacional
-          </figcaption>
-        </figure>
-      </aside>
+        <div class="robot-container">
+            <img src="../assets/images/Robo.png" alt="Robo mascote" class="robo" />
+        </div>
+        <div class="quiz-container">
+            <h1 class="quiz-title">QUIZ DEV</h1>
+            <p class="parabens">Parabéns pela iniciativa! 🚀</p>
+            <p class="descricao">Em poucos cliques vamos avaliar o seu perfil, e te direcionar para a trilha que mais
+                combina com seu perfil.</p>
+            <div class="question">Qual tipo de projeto te motiva mais:</div>
+            <div class="options">
+                <div class="option" data-option="A">A) Criar uma interface intuitiva.</div>
+                <div class="option" data-option="B">B) Desenvolver a logica de um sistema complexo</div>
+                <div class="option" data-option="C">C) Configurar um sistema robusto na nuvem.</div>
+            </div>
+            <div class="response-container">
+                <label>Resposta:</label>
+                <select>
+                    <option value="">Selecione...</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                <button class="submit-btn">Enviar</button>
+            </div>
+            <div class="navegacao">
+                <button class="nav-btn"> Back</button>
+                <button class="nav-btn">Next</button>
+            </div>
+        </div>
     </div>
-  </body>
+
+</body>
+
 </html>

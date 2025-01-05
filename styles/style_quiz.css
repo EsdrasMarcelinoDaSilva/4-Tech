@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../assets/images/plano-de-fundo.png");
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    background-color: #0b021f; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(14, 185, 237, 0.3); 
+    max-width: 1000px; 
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    justify-content:left; 
+    align-items:initial; 
+    
+}
+
+
+.left-side img {
+    max-width: 100%;
+    max-height: 100%;
+   
+}
+
+
+.right-side {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;  
+    color: cyan; 
+    
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    line-height: 1.6; 
+}
+
+.button {
+    background-color: cyan;
+    color: #0b021f; 
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.button:hover {
+    background-color: #00ffff; 
+}
+
+
+@media (max-width: 768px) { 
+    .container {
+        flex-direction: column; 
+    }
+    .left-side, .right-side {
+        flex: 5 10 100%; 
+    }
+}
