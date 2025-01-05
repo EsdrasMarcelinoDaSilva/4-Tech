@@ -4,47 +4,52 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: url("../assets/images/plano-de-fundo.png");
-    color: white; 
+    background-repeat: no-repeat;
+    background-size: cover; 
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 }
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 90vh;   
     background-color: #0b021f; 
-    padding: 20px;
+    padding: .5rem; 
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(14, 185, 237, 0.3); 
-    max-width: 1000px; 
+    width: 900px;
 }
 
 .left-side {
     flex: 1;
     display: flex;
-    justify-content:left; 
-    align-items:initial; 
-    
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: white;
 }
 
 
 .left-side img {
-    max-width: 100%;
-    max-height: 100%;
-   
+    width: 100%;
+    height: 100%;  
 }
 
 
 .right-side {
-    flex: 1;
-    padding: 20px;
+    color: white;
+    width: 56%;
+    padding: 2rem;
 }
 
 h1 {
-    font-size: 3em;  
-    color: cyan; 
-    
+    color: cyan;    
 }
 
 h2 {
@@ -57,21 +62,24 @@ ol {
     line-height: 1.6; 
 }
 
-.button {
-    background-color: cyan;
-    color: #0b021f; 
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2em;
-    margin-top: 20px;
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
+.field-button{
+    display: flex;
+    justify-content: center;
 }
 
-.button:hover {
-    background-color: #00ffff; 
+.field-button a{
+    padding: .5em;
+    background-color: #00ffff;
+    margin-bottom: 1em;
+    border-radius: .5em;
+    text-decoration: none;
+    color: black;
+    width: 30%;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #00ffffc8;     
 }
 
 
