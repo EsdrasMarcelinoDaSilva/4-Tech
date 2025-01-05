@@ -8,42 +8,53 @@
       content="Quiz para descobrir sua vocação na área de tecnologia"
     />
     <title>Quiz: Vocação Tecnológica</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../styles/quiz-check.css" />
   </head>
 
   <body>
     <div class="container">
-        <div class="robot-container">
-            <img src="../assets/images/Robo.png" alt="Robo mascote" class="robo" />
+      <div class="robot-container">
+        <img src="../assets/images/Robo.png" alt="Robo mascote" class="robo" />
+      </div>
+      <div class="quiz-container">
+        <h1 class="quiz-title">QUIZ DEV</h1>
+        <p class="parabens">Parabéns pela iniciativa! 🚀</p>
+        <p class="descricao">
+          Em poucos cliques vamos avaliar o seu perfil, e te direcionar para a
+          trilha que mais combina com seu perfil.
+        </p>
+        <div class="question">Qual tipo de projeto te motiva mais:</div>
+        <div class="options">
+          <div class="option" data-option="A">
+            A) Criar uma interface intuitiva.
+          </div>
+          <div class="option" data-option="B">
+            B) Desenvolver a logica de um sistema complexo
+          </div>
+          <div class="option" data-option="C">
+            C) Configurar um sistema robusto na nuvem.
+          </div>
         </div>
-        <div class="quiz-container">
-            <h1 class="quiz-title">QUIZ DEV</h1>
-            <p class="parabens">Parabéns pela iniciativa! 🚀</p>
-            <p class="descricao">Em poucos cliques vamos avaliar o seu perfil, e te direcionar para a trilha que mais
-                combina com seu perfil.</p>
-            <div class="question">Qual tipo de projeto te motiva mais:</div>
-            <div class="options">
-                <div class="option" data-option="A">A) Criar uma interface intuitiva.</div>
-                <div class="option" data-option="B">B) Desenvolver a logica de um sistema complexo</div>
-                <div class="option" data-option="C">C) Configurar um sistema robusto na nuvem.</div>
-            </div>
-            <div class="response-container">
-                <label>Resposta:</label>
-                <select>
-                    <option value="">Selecione...</option>
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                </select>
-                <button class="submit-btn">Enviar</button>
-            </div>
-            <div class="navegacao">
-                <button class="nav-btn"> Back</button>
-                <button class="nav-btn">Next</button>
-            </div>
+        <div class="response-container">
+          <label>Resposta:</label>
+          <select>
+            <option value="">Selecione...</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <a href="parabens.html" class="submit-btn">Enviar</a>
         </div>
+        <div class="navegacao">
+          <button class="nav-btn">Back</button>
+          <button class="nav-btn">Next</button>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

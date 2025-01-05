@@ -98,6 +98,7 @@ select {
 }
 
 .submit-btn {
+    text-decoration: none;
     padding: 0.5rem 2rem;
     background: #00f2fe;
     border: none;
