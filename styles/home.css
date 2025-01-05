@@ -39,7 +39,7 @@ h1{
 nav ul {
   list-style: none;
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
   cursor: pointer;
   font-weight: bold;
 }
