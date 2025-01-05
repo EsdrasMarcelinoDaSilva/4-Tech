@@ -10,6 +10,8 @@
 body {
     min-height: 100vh;
     background: url("../assets/images/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,9 +72,14 @@ body {
     cursor: pointer;
 }
 
-.container button.hidden{
+.container a.hidden{
+    text-decoration: none;
     background-color: transparent;
     border-color: #fff;
+}
+
+.container .login-button{
+    color: #fff;
 }
 
 .container form{

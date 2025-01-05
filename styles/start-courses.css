@@ -92,13 +92,10 @@ nav ul li a{
   align-items: center;
   gap: 20px;
 }
-.container h1 {
-  font-family: "Dancing Script", cursive;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-}
+
 .container .gallery {
-  display: flex;
+  margin-top: 2rem;
+  display: flex; 
   justify-content: center;
   align-items: center;
 }
@@ -186,9 +183,6 @@ nav ul li a{
   height: 360px;
 }
 
-.gif-video{
-  
-}
 
 @media screen and (max-width: 600px) {
   .img-box {
