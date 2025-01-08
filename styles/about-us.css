@@ -20,9 +20,11 @@ body {
     height: 100vh;
     position: relative;
     border-radius: 0 3rem 3rem 0;
+    display: flex;
+    justify-content: center; 
 }
 
-.logomarca{
+.logomarca{ 
     width: 20rem;
 }
 
@@ -33,7 +35,7 @@ body {
 .texto {
     position: absolute;
     top: 370px;
-    left: 160px;
+    left: 180px;
     color: aliceblue;
     padding: .5rem; 
     background-color: #041433; 
@@ -50,7 +52,7 @@ body {
 .text{
     color: aliceblue;
     text-align: justify;
-    font-size: medium;
+    font-size: large;
 }
 
 .imagens-rodape{
