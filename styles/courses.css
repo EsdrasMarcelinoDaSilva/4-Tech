@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: auto;
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-size: 15px;
+    
+  }
+
+
+.realce {
+    background-color: #05859C;
+    color: #fff;
+    border-radius: 4px;
+    
+}
+
+.divisor {
+    border: none;
+    height: 1px;
+    margin-left: 25%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 50%; 
+    background-color: #05859C; 
+    justify-items: center;
+}
+
+.playlist{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+    font-size: 12px;
+    padding: 0.625rem 1.25rem;
+    gap: 1rem
+}
+
+.text{
+    text-decoration: none;
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    transition: background-color 0.3s, padding 0.3s, border-radius 0.3s;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-size: 20px;
+  }
