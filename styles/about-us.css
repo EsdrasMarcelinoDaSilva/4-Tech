@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat";
+    background: #080338;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fundo {
+    background-image: url("../assets/images/background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 28%;
+    height: 100vh;
+    position: relative;
+    border-radius: 0 3rem 3rem 0;
+    display: flex;
+    justify-content: center; 
+}
+
+.logomarca{ 
+    width: 20rem;
+}
+
+.container {
+    display: flex;
+}
+
+.texto {
+    position: absolute;
+    top: 370px;
+    left: 180px;
+    color: aliceblue;
+    padding: .5rem; 
+    background-color: #041433; 
+}
+
+.texto-lateral {
+    width: 60%;
+    margin: 3rem 0 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.text{
+    color: aliceblue;
+    text-align: justify;
+    font-size: large;
+}
+
+.imagens-rodape{
+    display: flex;
+    gap: 1.4rem;
+}
+
+figcaption{
+    color: aliceblue;
+}
+
+.img-rodape{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure figcaption{
+    text-align: center;
+}
