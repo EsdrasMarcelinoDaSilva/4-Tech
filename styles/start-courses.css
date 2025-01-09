@@ -82,6 +82,7 @@ nav ul li a{
   border-radius: 5px;
   transition: background-color 0.3s, padding 0.3s, border-radius 0.3s;
   box-sizing: border-box;
+  
 }
 
 .container {
@@ -149,7 +150,7 @@ nav ul li a{
   background-color: #fff;
 }
 .container .gallery .img-box:nth-child(5) {
-  background: url("../assets/images/nodejs-logo-adesivo-sticker.png");
+  background: url("../assets/images/python.png");
   background-position: center;
   background-size: cover;
   background-color: #fff;
