@@ -1,36 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const select = document.querySelector('select');
-//     const options = document.querySelectorAll('.option');
-    
-//     // Remove seleção anterior
-//     function clearSelection() {
-//         options.forEach(option => {
-//             option.classList.remove('selected');
-//         });
-//     }
-    
-//     // Atualiza quando mudar o select
-//     select.addEventListener('change', function() {
-//         clearSelection();
-//         if(this.value) {
-//             const selectedDiv = document.querySelector(`.option[data-option="${this.value}"]`);
-//             if(selectedDiv) {
-//                 selectedDiv.classList.add('selected');
-//             }
-//         }
-//     });
-    
-//     // Atualiza quando clicar nas divs
-//     options.forEach(option => {
-//         option.addEventListener('click', function() {
-//             const optionValue = this.getAttribute('data-option');
-//             clearSelection();
-//             this.classList.add('selected');
-//             select.value = optionValue;
-//         });
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     const select = document.querySelector('select');
     const options = document.querySelectorAll('.option');
