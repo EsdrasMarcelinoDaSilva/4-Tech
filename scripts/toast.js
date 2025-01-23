@@ -15,7 +15,7 @@ function showToast(message, duration = 3000) {
 
     document.body.appendChild(toastElement);
 
-    toastElement.style.animation = 'toast-in 0.5s, toast-out 0.5s ' + (duration / 2000 - 0.5) + 's';
+    toastElement.style.animation = 'toast-in 0.5s, toast-out 0.5s ' + (duration / 1000 - 1) + 's';
 
     function removeToast() {
         document.body.removeChild(toastElement);

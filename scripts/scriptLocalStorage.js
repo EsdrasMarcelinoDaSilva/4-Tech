@@ -16,7 +16,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
       showToast('Por favor, preencha todos os campos.');
       return;
   }
-
+//---------------------------------------------------------------------------
   if (!validateEmail(signupEmail)) {
       showToast('Por favor, insira um e-mail válido.');
       return;
@@ -33,10 +33,12 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
       password: signupPassword
   };
 
-  console.log(userData);
+  //console.log(userData);
 
   localStorage.setItem('userData', JSON.stringify(userData));
   
+
+  // ------------------------ Limpa os campos do formulário -----------------------------
   this.reset();
   
   showToast('Conta criada com sucesso! Faça login para continuar.');
@@ -85,3 +87,4 @@ registerBtn.addEventListener('click', () => {
 loginBtn.addEventListener('click', () => {
   formContainer.classList.remove("active");
 });
+
