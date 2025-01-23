@@ -1,6 +1,6 @@
 function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }
 
 document.getElementById('signupForm').addEventListener('submit', function(e) {
@@ -10,7 +10,8 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
   const signupEmail = document.querySelector('.sign-up input[type="email"]').value.trim();
   const signupPassword = document.querySelector('.sign-up input[type="password"]').value;
 
-  // Validações
+  // ------------------------ Validações -----------------------------
+
   if (!signupName || !signupEmail || !signupPassword) {
       showToast('Por favor, preencha todos os campos.');
       return;
@@ -34,27 +35,24 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
 
   console.log(userData);
 
-  // Salva no localStorage
   localStorage.setItem('userData', JSON.stringify(userData));
   
-  // Limpa o formulário
   this.reset();
   
-  // Mostra mensagem de sucesso
   showToast('Conta criada com sucesso! Faça login para continuar.');
   
-  // Simula o clique no botão de login para mudar para o formulário de login
   document.getElementById('login').click();
 });
 
-// Manipulação do formulário de login
+// ----------------------------------------------- Manipulação do formulário de login -----------------------------------------------------
+
 document.getElementById('loginForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const loginEmail = document.querySelector('.sign-in input[type="email"]').value.trim();
   const loginPassword = document.querySelector('.sign-in input[type="password"]').value;
 
-  // Validação
+ 
   if (!loginEmail || !loginPassword) {
       showToast('Por favor, preencha todos os campos.');
       return;
@@ -65,7 +63,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   if (storedData && 
       loginEmail === storedData.email && 
       loginPassword === storedData.password) {
-      // Login bem-sucedido
       showToast('Login bem-sucedido! Redirecionando...');
         setTimeout(() => {
             window.location.href = 'introduction-quiz.html';
@@ -75,7 +72,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
   }
 });
 
-// Mantém o código original de alternância entre formulários
+// ---------------------------------------------- Mantém o código original de alternância entre formulários ---------------------------------
+
 const formContainer = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
